@@ -1,686 +1,819 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with Steller landing page.">
-    <meta name="author" content="Devcrud">
-    <title>My Portfolio | Welcome</title>
-    <!-- Tailwind CSS CDN -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash | Data Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Page icon -->
     <link rel="icon" type="image/x-icon" href="assets/imgs/logo.svg">
-</head>
-
-<body class="scroll-smooth" id="home">
-
-    <!-- Modern Animated Navbar -->
-    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="#home" class="flex items-center space-x-2">
-                <img src="assets/imgs/logo.svg" alt="Logo" class="h-8 w-auto">
-                <span class="text-xl font-bold text-gray-800">Akash</span>
-            </a>
-
-            <!-- Hamburger Menu -->
-            <button id="navbar-toggler"
-                class="lg:hidden flex flex-col justify-center items-center space-y-1 focus:outline-none">
-                <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
-                <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
-                <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
-            </button>
-
-            <!-- Nav Links -->
-            <div id="navbar-menu" class="hidden lg:flex items-center space-x-8">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#portfolio" class="nav-link">Portfolio</a>
-                <a href="#blog" class="nav-link">Blog</a>
-                <a href="certificates.html"
-                    class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">
-                    Certifications
-                </a>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden hidden flex flex-col bg-white px-4 pb-4 space-y-2">
-            <a href="#home" class="mobile-link">Home</a>
-            <a href="#about" class="mobile-link">About</a>
-            <a href="#skills" class="mobile-link">Skills</a>
-            <a href="#portfolio" class="mobile-link">Portfolio</a>
-            <a href="#blog" class="mobile-link">Blog</a>
-            <a href="certificates.html"
-                class="block w-full text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">
-                Certifications
-            </a>
-        </div>
-
-    </nav>
-    <!-- End of Page Navigation -->
-
-
-    <!-- Page Header -->
-    <header class="bg-gray-100 py-20" id="home">
-        <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20">
-            <!-- Left Text Block -->
-            <div class="text-center md:text-left md:w-1/2 animate-fade-in-up">
-                <h6 class="text-blue-600 text-lg font-semibold mb-2">Hello, I'm</h6>
-                <h1 class="text-gray-800 text-4xl md:text-5xl font-bold leading-tight">Akash</h1>
-                <p class="text-gray-600 text-lg mt-4">An Aspiring Data Scientist</p>
-
-                <!-- Action Buttons -->
-                <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=akash.hiremath25@gmail.com"
-                        target="_blank"
-                        class="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 shadow-md">
-                        HIRE ME
-                    </a>
-                    <a href="assets/archives/Resume.pdf" download
-                        class="px-6 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-900 transition duration-300 shadow-md">
-                        DOWNLOAD CV
-                    </a>
-                </div>
-
-                <!-- Social Links -->
-                <div class="flex justify-center md:justify-start mt-6 space-x-5">
-                    <a href="https://www.linkedin.com/in/akash-hiremath25/" target="_blank" title="LinkedIn">
-                        <img src="assets/imgs/linkedin.png" alt="LinkedIn"
-                            class="h-8 w-8 hover:scale-110 transition duration-300">
-                    </a>
-                    <a href="https://github.com/AkashHiremath856/" target="_blank" title="GitHub">
-                        <img src="assets/imgs/github.png" alt="GitHub"
-                            class="h-8 w-8 hover:scale-110 transition duration-300">
-                    </a>
-                    <a href="https://www.hackerrank.com/akash_hiremath25?hr_r=1" target="_blank" title="HackerRank">
-                        <img src="assets/imgs/hackerrank.png" alt="HackerRank"
-                            class="h-8 w-8 hover:scale-110 transition duration-300">
-                    </a>
-                    <a href="https://medium.com/@akash.hiremath25" target="_blank" title="Medium">
-                        <img src="assets/imgs/medium.png" alt="Medium"
-                            class="h-8 w-8 hover:scale-110 transition duration-300">
-                    </a>
-                    <a href="https://leetcode.com/user1604gb/" target="_blank" title="LeetCode">
-                        <img src="assets/imgs/leet.png" alt="LeetCode"
-                            class="h-8 w-8 hover:scale-110 transition duration-300">
-                    </a>
-                    <a href="https://www.kaggle.com/akashhiremath25" target="_blank" title="Kaggle">
-                        <img src="assets/imgs/kaggle.png" alt="Kaggle"
-                            class="h-8 w-8 hover:scale-110 transition duration-300">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Right Image -->
-            <div class="mb-10 md:mb-0 md:w-1/2 flex justify-center animate-fade-in-up delay-200">
-                <img src="assets/imgs/background.jpg" alt="Akash's Image"
-                    class="rounded-xl shadow-2xl w-full max-w-sm md:max-w-md hover:scale-105 transition-transform duration-500">
-            </div>
-        </div>
-    </header>
-    <!-- End Page Header -->
-
-
-    <!-- About section -->
-    <section id="about" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6 md:px-20">
-            <div class="flex flex-col md:flex-row items-center">
-                <!-- Profile Image -->
-                <div class="w-full md:w-1/3 flex justify-center md:justify-start">
-                    <img src="assets/imgs/avatar.png" alt="Akash's Profile"
-                        class="rounded-full shadow-lg w-48 h-48 mb-6 md:mb-0">
-                </div>
-
-                <!-- About Content -->
-                <div class="w-full md:w-2/3 md:pl-8">
-                    <h2 class="text-3xl font-bold text-gray-800">Akash</h2>
-                    <h4 class="text-xl text-blue-600 mt-2">Data Engineer & Analyst | MCA Graduate</h4>
-
-                    <p class="text-gray-700 mt-4 leading-relaxed">
-                        I’m a passionate data engineer and analyst based in Karnataka, India, with a Master’s in
-                        Computer Applications from the University of Mysore. I bring hands-on experience across data
-                        analytics, machine learning, web scraping automation, and building production-ready tools that
-                        improve efficiency and insight generation.
-                    </p>
-
-                    <p class="text-gray-700 mt-4 leading-relaxed">
-                        During my internship at <strong>Analyttica Datalab</strong>, I leveraged <strong>Python, SQL,
-                            Tableau, and machine learning algorithms</strong> to improve model accuracy by 20% across
-                        multiple projects. I developed a smart ticket classification system that reduced processing time
-                        by 40%, enhanced accuracy by 25%, and automated workflows for over 500+ tickets monthly.
-                    </p>
-
-                    <p class="text-gray-700 mt-4 leading-relaxed">
-                        At <strong>Coders Boutique</strong>, I built tools like <em>WebScrapIn</em> — a Chrome extension
-                        to scrape LinkedIn data and automate messaging — improving outreach efficiency by 40%. I also
-                        created <em>ApplyIn</em>, an AI-based job application tool that fills out forms and improves ATS
-                        relevance, reducing manual effort by 50%.
-                    </p>
-
-                    <p class="text-gray-700 mt-4 leading-relaxed">
-                        I enjoy building solutions that automate repetitive tasks and uncover insights from large
-                        datasets. I’m skilled in <strong>PostgreSQL, Python, Pandas, Tableau, Excel, Docker, and LLM
-                            tools</strong>, and always eager to learn and take on new challenges in the data space.
-                    </p>
-
-                    <a href="assets/archives/Resume.pdf" target="_blank"
-                        class="inline-block mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
-                        DOWNLOAD CV
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End About section -->
-
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-6 md:px-20">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800">Skills</h2>
-                <p class="text-gray-600 text-lg mt-2">Tools & Technologies I Work With</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- Skill Item Template -->
-                <!-- Repeat this block with different labels and % -->
-                <div class="group">
-                    <h6 class="text-lg font-medium text-gray-700">Python & MySQL</h6>
-                    <div class="relative mt-2">
-                        <div class="w-full bg-gray-300 rounded-full h-3">
-                            <div class="bg-blue-600 h-3 rounded-full transition-all duration-700 ease-in-out group-hover:opacity-80"
-                                style="width: 90%;"></div>
-                        </div>
-                        <span
-                            class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 text-white font-semibold opacity-0 group-hover:opacity-100 transition duration-300">90%</span>
-                    </div>
-                </div>
-
-                <div class="group">
-                    <h6 class="text-lg font-medium text-gray-700">Pandas & MS Excel</h6>
-                    <div class="relative mt-2">
-                        <div class="w-full bg-gray-300 rounded-full h-3">
-                            <div class="bg-blue-600 h-3 rounded-full transition-all duration-700 ease-in-out group-hover:opacity-80"
-                                style="width: 85%;"></div>
-                        </div>
-                        <span
-                            class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 text-white font-semibold opacity-0 group-hover:opacity-100 transition duration-300">85%</span>
-                    </div>
-                </div>
-
-                <div class="group">
-                    <h6 class="text-lg font-medium text-gray-700">Power BI & Tableau</h6>
-                    <div class="relative mt-2">
-                        <div class="w-full bg-gray-300 rounded-full h-3">
-                            <div class="bg-blue-600 h-3 rounded-full transition-all duration-700 ease-in-out group-hover:opacity-80"
-                                style="width: 88%;"></div>
-                        </div>
-                        <span
-                            class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 text-white font-semibold opacity-0 group-hover:opacity-100 transition duration-300">88%</span>
-                    </div>
-                </div>
-
-                <div class="group">
-                    <h6 class="text-lg font-medium text-gray-700">Scikit-Learn & PyTorch</h6>
-                    <div class="relative mt-2">
-                        <div class="w-full bg-gray-300 rounded-full h-3">
-                            <div class="bg-blue-600 h-3 rounded-full transition-all duration-700 ease-in-out group-hover:opacity-80"
-                                style="width: 89%;"></div>
-                        </div>
-                        <span
-                            class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 text-white font-semibold opacity-0 group-hover:opacity-100 transition duration-300">89%</span>
-                    </div>
-                </div>
-
-                <div class="group">
-                    <h6 class="text-lg font-medium text-gray-700">NLTK & SpaCy</h6>
-                    <div class="relative mt-2">
-                        <div class="w-full bg-gray-300 rounded-full h-3">
-                            <div class="bg-blue-600 h-3 rounded-full transition-all duration-700 ease-in-out group-hover:opacity-80"
-                                style="width: 95%;"></div>
-                        </div>
-                        <span
-                            class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 text-white font-semibold opacity-0 group-hover:opacity-100 transition duration-300">95%</span>
-                    </div>
-                </div>
-
-                <div class="group">
-                    <h6 class="text-lg font-medium text-gray-700">Beautiful Soup</h6>
-                    <div class="relative mt-2">
-                        <div class="w-full bg-gray-300 rounded-full h-3">
-                            <div class="bg-blue-600 h-3 rounded-full transition-all duration-700 ease-in-out group-hover:opacity-80"
-                                style="width: 85%;"></div>
-                        </div>
-                        <span
-                            class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 text-white font-semibold opacity-0 group-hover:opacity-100 transition duration-300">85%</span>
-                    </div>
-                </div>
-
-                <div class="group">
-                    <h6 class="text-lg font-medium text-gray-700">Git & Docker</h6>
-                    <div class="relative mt-2">
-                        <div class="w-full bg-gray-300 rounded-full h-3">
-                            <div class="bg-blue-600 h-3 rounded-full transition-all duration-700 ease-in-out group-hover:opacity-80"
-                                style="width: 83%;"></div>
-                        </div>
-                        <span
-                            class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 text-white font-semibold opacity-0 group-hover:opacity-100 transition duration-300">83%</span>
-                    </div>
-                </div>
-
-                <div class="group">
-                    <h6 class="text-lg font-medium text-gray-700">LLM (Gemini, RAG, FAISS)</h6>
-                    <div class="relative mt-2">
-                        <div class="w-full bg-gray-300 rounded-full h-3">
-                            <div class="bg-blue-600 h-3 rounded-full transition-all duration-700 ease-in-out group-hover:opacity-80"
-                                style="width: 70%;"></div>
-                        </div>
-                        <span
-                            class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 text-white font-semibold opacity-0 group-hover:opacity-100 transition duration-300">70%</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Skills Section -->
-
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section bg-gray-50 py-16">
-        <div class="container mx-auto text-center">
-            <h6 class="subtitle text-5xl font-semibold text-blue-500">Portfolio</h6>
-            <h6 class="section-title text-3xl font-bold text-gray-800 mb-8">Check My Wonderful Works</h6>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-20">
-                <!-- Portfolio Item 1 -->
-                <div
-                    class="img-wrapper relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
-                    <img src="assets/imgs/1.jpg" alt="IBM Cognos Customer Churn Analysis"
-                        class="w-full h-full object-cover">
-                    <div
-                        class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <div
-                            class="overlay-infos text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-6">
-                            <h5 class="text-lg font-semibold mb-4">IBM Cognos Customer Churn Analysis</h5>
-                            <a href="assets/imgs/1.jpg" class="inline-block mb-2">
-                                <i class="ti-zoom-in text-2xl"></i>
-                            </a>
-                            <a href="https://github.com/AkashHiremath856/IBM_Telco_customer_churn" class="inline-block">
-                                <i class="ti-link text-2xl" title="Source Code"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 2 -->
-                <div
-                    class="img-wrapper relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
-                    <img src="assets/imgs/2.jpg" alt="Recommendation System for E-Commerce Platform"
-                        class="w-full h-full object-cover">
-                    <div
-                        class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <div
-                            class="overlay-infos text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-6">
-                            <h5 class="text-lg font-semibold mb-4">Recommendation System for E-Commerce Platform</h5>
-                            <a href="assets/imgs/2.jpg" class="inline-block mb-2" target="_blank">
-                                <i class="ti-zoom-in text-2xl"></i>
-                            </a>
-                            <a href="https://github.com/AkashHiremath856/Recommendation_Systems" class="inline-block"
-                                target="_blank">
-                                <i class="ti-link text-2xl" title="Source Code"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 3 -->
-                <div
-                    class="img-wrapper relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
-                    <img src="assets/imgs/3.png" alt="Sentiment Analysis and Predictions"
-                        class="w-full h-full object-cover">
-                    <div
-                        class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <div
-                            class="overlay-infos text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-6">
-                            <h5 class="text-lg font-semibold mb-4">Sentiment Analysis and Predictions</h5>
-                            <a href="assets/imgs/3.png" class="inline-block mb-2">
-                                <i class="ti-zoom-in text-2xl"></i>
-                            </a>
-                            <a href="https://akashhiremath856.github.io/MyPortfolio.github.io/img/10.jpg"
-                                class="inline-block">
-                                <i class="ti-link text-2xl" title="Source Code"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 4 -->
-                <div
-                    class="img-wrapper relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
-                    <img src="assets/imgs/4.png" alt="Time Series Forecasting" class="w-full h-full object-cover">
-                    <div
-                        class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <div
-                            class="overlay-infos text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-6">
-                            <h5 class="text-lg font-semibold mb-4">Time Series Forecasting</h5>
-                            <a href="assets/imgs/4.png" class="inline-block mb-2">
-                                <i class="ti-zoom-in text-2xl"></i>
-                            </a>
-                            <a href="https://github.com/AkashHiremath856/Sentiment_Analysis_and_Predictions"
-                                class="inline-block">
-                                <i class="ti-link text-2xl" title="Source Code"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 5 -->
-                <div
-                    class="img-wrapper relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
-                    <img src="assets/imgs/5.jpg" alt="Teachable Machine For Facial Recognition"
-                        class="w-full h-full object-cover">
-                    <div
-                        class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <div
-                            class="overlay-infos text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-6">
-                            <h5 class="text-lg font-semibold mb-4">Teachable Machine For Facial Recognition</h5>
-                            <a href="assets/imgs/5.jpg" class="inline-block mb-2">
-                                <i class="ti-zoom-in text-2xl"></i>
-                            </a>
-                            <a href="https://github.com/AkashHiremath856/Teachable_Machine_For_Facial_Recognition"
-                                class="inline-block">
-                                <i class="ti-link text-2xl" title="Source Code"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 6 -->
-                <div
-                    class="img-wrapper relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
-                    <img src="assets/imgs/6.webp" alt="ChatBot Using NLTK and Cosine Similarity"
-                        class="w-full h-full object-cover">
-                    <div
-                        class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <div
-                            class="overlay-infos text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-6">
-                            <h5 class="text-lg font-semibold mb-4">ChatBot Using NLTK and Cosine Similarity</h5>
-                            <a href="assets/imgs/6.webp" class="inline-block mb-2">
-                                <i class="ti-zoom-in text-2xl"></i>
-                            </a>
-                            <a href="https://github.com/AkashHiremath856/ChatBot_Using_NLP" class="inline-block">
-                                <i class="ti-link text-2xl" title="Source Code"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 7 -->
-                <div
-                    class="img-wrapper relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
-                    <img src="assets/imgs/7.png" alt="Data Analysis using Excel" class="w-full h-full object-cover">
-                    <div
-                        class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <div
-                            class="overlay-infos text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-6">
-                            <h5 class="text-lg font-semibold mb-4">Data Analysis using Excel</h5>
-                            <a href="assets/imgs/7.png" class="inline-block mb-2">
-                                <i class="ti-zoom-in text-2xl"></i>
-                            </a>
-                            <a href="https://github.com/AkashHiremath856/Data-Analysis-Projects/tree/main/Excel"
-                                class="inline-block">
-                                <i class="ti-link text-2xl" title="Source Code"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 8 -->
-                <div
-                    class="img-wrapper relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
-                    <img src="assets/imgs/8.png" alt="Data Analysis using PowerBI" class="w-full h-full object-cover">
-                    <div
-                        class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <div
-                            class="overlay-infos text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-6">
-                            <h5 class="text-lg font-semibold mb-4">Data Analysis using PowerBI</h5>
-                            <a href="assets/imgs/8.png" class="inline-block mb-2">
-                                <i class="ti-zoom-in text-2xl"></i>
-                            </a>
-                            <a href="https://github.com/AkashHiremath856/Data-Analysis-Projects/tree/main/PowerBI"
-                                class="inline-block">
-                                <i class="ti-link text-2xl" title="Source Code"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 9 -->
-                <div
-                    class="img-wrapper relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
-                    <img src="assets/imgs/9.png" alt="Generating Anime Characters Using GAN"
-                        class="w-full h-full object-cover">
-                    <div
-                        class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <div
-                            class="overlay-infos text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-6">
-                            <h5 class="text-lg font-semibold mb-4">Generating Anime Characters Using GAN</h5>
-                            <a href="assets/imgs/9.png" class="inline-block mb-2">
-                                <i class="ti-zoom-in text-2xl"></i>
-                            </a>
-                            <a href="https://github.com/AkashHiremath856/GAN_Anime_Characters_Face"
-                                class="inline-block">
-                                <i class="ti-link text-2xl" title="Source Code"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of Portfolio Section -->
-
-
-    <!-- Blog Section -->
-    <section id="blog" class="section bg-gray-100 py-16">
-        <div class="container mx-auto text-center">
-            <h6 class="subtitle text-5xl font-semibold text-blue-500">My Blogs</h6>
-            <h6 class="section-title text-3xl font-bold text-gray-800 mb-8">Latest</h6>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-20">
-                <!-- Blog Post 1 -->
-                <div
-                    class="card border rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
-                    <img src="assets/imgs/b3.jpg" alt="Fine-tuning with Gemma Model"
-                        class="card-img-top w-full h-64 object-cover">
-                    <div class="card-body p-6 bg-white">
-                        <h5 class="card-title text-xl font-semibold text-gray-800 mb-4">
-                            A Guide to Fine-tuning with Google Gemma's Model
-                        </h5>
-                        <p class="text-gray-600 mb-4">
-                            Fine-tuning LLM model using Quantization, LoRA, QLoRA. This post explains how these concepts
-                            help reduce memory usage, simplify training, and improve model performance.
-                        </p>
-                        <a href="https://medium.com/@akash.hiremath25/mastering-precision-a-guide-to-fine-tuning-with-google-gemmas-model-8b27f9c0cddb"
-                            class="text-blue-500 font-semibold hover:underline">Read More..</a>
-                    </div>
-                </div>
-
-                <!-- Blog Post 2 -->
-                <div
-                    class="card border rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
-                    <img src="assets/imgs/b1.jpg" alt="Gemini FAISS PDF App"
-                        class="card-img-top w-full h-64 object-cover">
-                    <div class="card-body p-6 bg-white">
-                        <h5 class="card-title text-xl font-semibold text-gray-800 mb-4">
-                            Building an Application with Gemini, Python, and FAISS
-                        </h5>
-                        <p class="text-gray-600 mb-4">
-                            Explore how to create powerful AI apps that process PDF documents using LLMs, FAISS
-                            indexing, and Python — perfect for multi-input NLP workflows.
-                        </p>
-                        <a href="https://medium.com/@akash.hiremath25/unlocking-the-power-of-intelligence-building-an-application-with-gemini-python-and-faiss-for-eb9a055d2429"
-                            class="text-blue-500 font-semibold hover:underline">Read More..</a>
-                    </div>
-                </div>
-
-                <!-- Blog Post 3 -->
-                <div
-                    class="card border rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
-                    <img src="assets/imgs/b2.webp" alt="Outlier Detection"
-                        class="card-img-top w-full h-64 object-cover">
-                    <div class="card-body p-6 bg-white">
-                        <h5 class="card-title text-xl font-semibold text-gray-800 mb-4">
-                            Unearthing Outliers: Methods for Detection and Handling
-                        </h5>
-                        <p class="text-gray-600 mb-4">
-                            Discover techniques for identifying and treating outliers in your data to ensure more
-                            accurate and reliable machine learning models.
-                        </p>
-                        <a href="https://medium.com/@akash.hiremath25/unearthing-outliers-methods-for-detection-and-handling-a0edf050aff6"
-                            class="text-blue-500 font-semibold hover:underline">Read More..</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</body>
-<!-- End of Blog Section -->
-
-
-<!-- Hire Me Section -->
-<section class="py-12 bg-blue-600 text-white">
-    <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-            <!-- Text Section -->
-            <div class="text-center md:text-left flex-1">
-                <h3 class="text-2xl font-semibold mb-2">Looking for a Data Geek? Hire Me!</h3>
-                <p class="text-lg opacity-90">I bring a passion for data analysis, machine learning, and predictive
-                    modeling to deliver impactful results.</p>
-            </div>
-
-            <!-- Button -->
-            <div>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=akash.hiremath25@gmail.com"
-                    class="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-600 font-semibold rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300 ease-in-out">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-pulse" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M16 12H8m8 0l-4-4m4 4l-4 4m12-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    Contact Me
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End of Hire Me Section -->
-
-
-<!-- Page Footer -->
-<footer class="bg-gray-900 text-white py-8">
-    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-        <!-- Left -->
-        <p class="text-sm text-center md:text-left mb-4 md:mb-0">
-            &copy;
-            <script>document.write(new Date().getFullYear())</script>
-            <a href="#" class="text-blue-400 hover:underline font-medium">Akash</a>. All rights reserved.
-        </p>
-
-        <!-- Right: Social Icons -->
-        <div class="flex justify-center space-x-6">
-            <a href="https://github.com/AkashHiremath856" target="_blank" class="hover:text-blue-400 transition"
-                title="GitHub">
-                <i class="fab fa-github fa-lg"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/akash-hiremath" target="_blank" class="hover:text-blue-400 transition"
-                title="LinkedIn">
-                <i class="fab fa-linkedin fa-lg"></i>
-            </a>
-            <a href="mailto:akash.hiremath25@gmail.com" class="hover:text-blue-400 transition" title="Email">
-                <i class="fas fa-envelope fa-lg"></i>
-            </a>
-        </div>
-    </div>
-</footer>
-<!-- End of Page Footer -->
-
-<!-- Style -->
-<style>
-    .nav-link {
-        position: relative;
-        color: #1f2937;
-        font-weight: 500;
-        transition: color 0.3s ease;
-    }
-
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        bottom: -6px;
-        left: 0;
-        width: 0%;
-        height: 2px;
-        background-color: #2563eb;
-        transition: width 0.3s ease;
-    }
-
-    .nav-link:hover {
-        color: #2563eb;
-    }
-
-    .nav-link:hover::after {
-        width: 100%;
-    }
-
-    .mobile-link {
-        padding: 0.5rem 0;
-        color: #1f2937;
-        font-weight: 500;
-        border-bottom: 1px solid #e5e7eb;
-        transition: color 0.3s ease;
-    }
-
-    .mobile-link:hover {
-        color: #2563eb;
-    }
-
-    @keyframes fade-in-up {
-        0% {
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0e17;
+            --bg-card: #141821;
+            --accent-cyan: #00d4ff;
+            --accent-purple: #a855f7;
+            --accent-green: #10b981;
+            --text-primary: #e4e4e7;
+            --text-muted: #9ca3af;
+            --border: #1f2937;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Archivo', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+        
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        /* Animated Grid Background */
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(var(--border) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+            z-index: -2;
+        }
+        
+        /* Gradient Orbs */
+        .gradient-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.15;
+            z-index: -1;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        .orb-1 {
+            top: 10%;
+            left: 20%;
+            width: 500px;
+            height: 500px;
+            background: var(--accent-cyan);
+            animation-delay: 0s;
+        }
+        
+        .orb-2 {
+            top: 60%;
+            right: 10%;
+            width: 400px;
+            height: 400px;
+            background: var(--accent-purple);
+            animation-delay: 7s;
+        }
+        
+        .orb-3 {
+            bottom: 10%;
+            left: 40%;
+            width: 350px;
+            height: 350px;
+            background: var(--accent-green);
+            animation-delay: 14s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(50px, -50px) scale(1.1); }
+            66% { transform: translate(-30px, 30px) scale(0.9); }
+        }
+        
+        /* Scroll Reveal Animations */
+        .reveal {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(50px);
+            animation: revealUp 0.8s ease-out forwards;
         }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0);
+        
+        @keyframes revealUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-    }
-
-    .animate-fade-in-up {
-        animation: fade-in-up 0.8s ease-out both;
-    }
-
-    .delay-200 {
-        animation-delay: 0.2s;
-    }
-</style>
-<!-- End Style -->
-
-
-<!-- Script for Mobile Menu -->
-<script>
-    const toggler = document.getElementById("navbar-toggler");
-    const menu = document.getElementById("mobile-menu");
-
-    toggler.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-    });
-
-</script>
-
+        
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+        
+        /* Glowing Text Effect */
+        .glow-text {
+            text-shadow: 0 0 20px var(--accent-cyan), 0 0 40px var(--accent-cyan);
+        }
+        
+        /* Card Hover Effects */
+        .card-tech {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-tech::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+            animation: scan 3s linear infinite;
+        }
+        
+        @keyframes scan {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .card-tech:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+        }
+        
+        /* Button Styles */
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid var(--accent-cyan);
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        /* Skill Tag Animation */
+        .skill-tag {
+            transition: all 0.3s;
+            cursor: default;
+        }
+        
+        .skill-tag:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px var(--accent-cyan);
+        }
+        
+        /* Terminal Effect for Code */
+        .terminal {
+            background: #000;
+            border: 1px solid var(--accent-green);
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-green);
+            position: relative;
+        }
+        
+        .terminal::before {
+            content: 'akash@data-engineer:~$';
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--accent-cyan);
+        }
+        
+        /* Timeline Styles */
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            padding-bottom: 3rem;
+            border-left: 2px solid var(--border);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-cyan);
+            box-shadow: 0 0 20px var(--accent-cyan);
+        }
+        
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+        }
+        
+        /* Stat Counter */
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Navigation */
+        nav {
+            backdrop-filter: blur(20px);
+            background: rgba(10, 14, 23, 0.8);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        /* Typing Cursor Effect */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-cyan);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-purple);
+        }
+        
+        /* Section Divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+            margin: 4rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="grid-bg"></div>
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold mono reveal">
+                    <span class="text-cyan-400">&lt;</span>Akash<span class="text-cyan-400">/&gt;</span>
+                </div>
+                <div class="hidden md:flex space-x-8 reveal delay-1">
+                    <a href="#about" class="text-gray-400 hover:text-cyan-400 transition-colors mono text-sm">About</a>
+                    <a href="#experience" class="text-gray-400 hover:text-cyan-400 transition-colors mono text-sm">Experience</a>
+                    <a href="#skills" class="text-gray-400 hover:text-cyan-400 transition-colors mono text-sm">Skills</a>
+                    <a href="#projects" class="text-gray-400 hover:text-cyan-400 transition-colors mono text-sm">Projects</a>
+                    <a href="#contact" class="text-gray-400 hover:text-cyan-400 transition-colors mono text-sm">Contact</a>
+                </div>
+                <a href="mailto:akash.hiremath25@gmail.com" class="btn-primary bg-transparent text-cyan-400 px-6 py-2 rounded-lg hover:bg-cyan-400 hover:text-black transition-all reveal delay-2 mono text-sm">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 pt-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="reveal delay-1">
+                <p class="text-cyan-400 mono text-sm mb-4">Hi, my name is</p>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black mb-4 reveal delay-2">
+                Akash<span class="text-cyan-400">.</span>
+            </h1>
+            <h2 class="text-4xl md:text-6xl font-bold text-gray-400 mb-8 reveal delay-3">
+                I build <span class="glow-text text-cyan-400 typing-cursor">data pipelines</span>
+            </h2>
+            <p class="text-xl text-gray-400 max-w-2xl mb-12 reveal delay-4 leading-relaxed">
+                Impact-driven Data Engineer specializing in ETL/ELT pipelines, cloud platforms, and big data technologies. 
+                Transforming complex datasets into analytics-ready assets with proven efficiency gains of 30-60%.
+            </p>
+            
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 reveal delay-5">
+                <div class="card-tech p-6 rounded-lg text-center">
+                    <div class="stat-number">500K+</div>
+                    <div class="text-gray-400 text-sm mt-2 mono">Records/Month</div>
+                </div>
+                <div class="card-tech p-6 rounded-lg text-center">
+                    <div class="stat-number">45%</div>
+                    <div class="text-gray-400 text-sm mt-2 mono">Query Optimization</div>
+                </div>
+                <div class="card-tech p-6 rounded-lg text-center">
+                    <div class="stat-number">60%</div>
+                    <div class="text-gray-400 text-sm mt-2 mono">Effort Reduction</div>
+                </div>
+                <div class="card-tech p-6 rounded-lg text-center">
+                    <div class="stat-number">1+</div>
+                    <div class="text-gray-400 text-sm mt-2 mono">Years Experience</div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 reveal delay-6">
+                <a href="#experience" class="btn-primary bg-cyan-400 text-black px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-2xl transition-all text-center">
+                    View My Work
+                </a>
+                <a href="https://linkedin.com/in/akash-hiremath25/" target="_blank" class="btn-primary bg-transparent text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all text-center">
+                    LinkedIn Profile →
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black mb-12">
+                <span class="text-cyan-400 mono text-2xl">//</span> About Me
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        I'm a Data Engineer based in India with a passion for building scalable data solutions. 
+                        My journey in data engineering has been driven by a desire to transform raw data into 
+                        actionable insights that drive business decisions.
+                    </p>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        With experience across multiple industries including hospitality and technology, I've 
+                        developed a strong foundation in ETL/ELT pipelines, cloud platforms (AWS, Azure), and 
+                        big data technologies. I specialize in optimizing data workflows and ensuring data quality 
+                        at scale.
+                    </p>
+                    <div class="terminal">
+                        SELECT * FROM skills<br>
+                        WHERE expertise IN ('Python', 'SQL', 'Apache Spark')<br>
+                        AND passion = 'Data Engineering';
+                    </div>
+                </div>
+                
+                <div class="card-tech p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-6 text-cyan-400">Tech Arsenal</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="mono text-sm">Python & SQL</span>
+                                <span class="text-cyan-400 mono text-sm">95%</span>
+                            </div>
+                            <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-cyan-400 to-purple-500" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="mono text-sm">ETL/ELT Pipelines</span>
+                                <span class="text-cyan-400 mono text-sm">90%</span>
+                            </div>
+                            <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-cyan-400 to-purple-500" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="mono text-sm">Cloud (AWS/Azure)</span>
+                                <span class="text-cyan-400 mono text-sm">85%</span>
+                            </div>
+                            <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-cyan-400 to-purple-500" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="mono text-sm">Apache Spark</span>
+                                <span class="text-cyan-400 mono text-sm">80%</span>
+                            </div>
+                            <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-cyan-400 to-purple-500" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="section-divider max-w-7xl mx-auto px-6"></div>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black mb-16">
+                <span class="text-cyan-400 mono text-2xl">//</span> Experience
+            </h2>
+            
+            <div class="space-y-0">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="card-tech p-8 rounded-xl">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-cyan-400 mb-2">Data Engineer Trainee</h3>
+                                <p class="text-xl text-gray-300 mb-2">Zoyinfinity Hospitality Pvt. Ltd.</p>
+                            </div>
+                            <span class="mono text-sm text-purple-400">Jan 2025 – Jan 2026</span>
+                        </div>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex">
+                                <span class="text-cyan-400 mr-3">▹</span>
+                                <span>Architected end-to-end data pipelines processing 500K+ records/month, increasing reporting availability by 35%</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-cyan-400 mr-3">▹</span>
+                                <span>Built ETL workflows ingesting from 5+ source systems, reducing data latency from hours to under 20 minutes</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-cyan-400 mr-3">▹</span>
+                                <span>Optimized SQL queries by 45% through indexing and query refactoring, accelerating BI dashboards</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-cyan-400 mr-3">▹</span>
+                                <span>Streamlined AWS batch processing with automation, reducing manual effort by 60%</span>
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span class="skill-tag mono text-xs px-3 py-1 bg-cyan-400/10 text-cyan-400 rounded-full border border-cyan-400/30">Python</span>
+                            <span class="skill-tag mono text-xs px-3 py-1 bg-cyan-400/10 text-cyan-400 rounded-full border border-cyan-400/30">SQL</span>
+                            <span class="skill-tag mono text-xs px-3 py-1 bg-cyan-400/10 text-cyan-400 rounded-full border border-cyan-400/30">PostgreSQL</span>
+                            <span class="skill-tag mono text-xs px-3 py-1 bg-cyan-400/10 text-cyan-400 rounded-full border border-cyan-400/30">AWS</span>
+                            <span class="skill-tag mono text-xs px-3 py-1 bg-cyan-400/10 text-cyan-400 rounded-full border border-cyan-400/30">ETL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="card-tech p-8 rounded-xl">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-cyan-400 mb-2">Data Engineer Intern</h3>
+                                <p class="text-xl text-gray-300 mb-2">Coders Boutique (Remote)</p>
+                            </div>
+                            <span class="mono text-sm text-purple-400">Oct 2024 – Dec 2024</span>
+                        </div>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex">
+                                <span class="text-cyan-400 mr-3">▹</span>
+                                <span>Engineered Chrome extension for automated LinkedIn profile extraction, increasing throughput by 40%</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-cyan-400 mr-3">▹</span>
+                                <span>Refined batch processing pipelines using SQL, reducing manual intervention by 30%</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-cyan-400 mr-3">▹</span>
+                                <span>Spearheaded AI-driven resume parser leveraging NLP, projected to reduce application time by 50%</span>
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span class="skill-tag mono text-xs px-3 py-1 bg-purple-400/10 text-purple-400 rounded-full border border-purple-400/30">Python</span>
+                            <span class="skill-tag mono text-xs px-3 py-1 bg-purple-400/10 text-purple-400 rounded-full border border-purple-400/30">BeautifulSoup</span>
+                            <span class="skill-tag mono text-xs px-3 py-1 bg-purple-400/10 text-purple-400 rounded-full border border-purple-400/30">Selenium</span>
+                            <span class="skill-tag mono text-xs px-3 py-1 bg-purple-400/10 text-purple-400 rounded-full border border-purple-400/30">REST API</span>
+                            <span class="skill-tag mono text-xs px-3 py-1 bg-purple-400/10 text-purple-400 rounded-full border border-purple-400/30">NLP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 3 -->
+                <div class="timeline-item">
+                    <div class="card-tech p-8 rounded-xl">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-cyan-400 mb-2">Data Analyst Intern</h3>
+                                <p class="text-xl text-gray-300 mb-2">Analyttica Datalab, Bengaluru</p>
+                            </div>
+                            <span class="mono text-sm text-purple-400">Feb 2024 – Jun 2024</span>
+                        </div>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex">
+                                <span class="text-cyan-400 mr-3">▹</span>
+                                <span>Boosted ML model performance by 20%+ through training Decision Trees and Deep Neural Networks</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-cyan-400 mr-3">▹</span>
+                                <span>Deployed intelligent ticket categorization system, reducing triage time by 40%</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-cyan-400 mr-3">▹</span>
+                                <span>Performed EDA on 100,000+ row datasets, influencing 10+ strategic business decisions</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-cyan-400 mr-3">▹</span>
+                                <span>Designed interactive Tableau dashboards enabling data-driven retention strategies</span>
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span class="skill-tag mono text-xs px-3 py-1 bg-green-400/10 text-green-400 rounded-full border border-green-400/30">Python</span>
+                            <span class="skill-tag mono text-xs px-3 py-1 bg-green-400/10 text-green-400 rounded-full border border-green-400/30">Machine Learning</span>
+                            <span class="skill-tag mono text-xs px-3 py-1 bg-green-400/10 text-green-400 rounded-full border border-green-400/30">Tableau</span>
+                            <span class="skill-tag mono text-xs px-3 py-1 bg-green-400/10 text-green-400 rounded-full border border-green-400/30">EDA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="section-divider max-w-7xl mx-auto px-6"></div>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black mb-16">
+                <span class="text-cyan-400 mono text-2xl">//</span> Technical Skills
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Programming -->
+                <div class="card-tech p-8 rounded-xl">
+                    <div class="w-16 h-16 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-cyan-400">Programming & Query</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-cyan-400/10 text-cyan-400 rounded-lg">Python</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-cyan-400/10 text-cyan-400 rounded-lg">SQL</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-cyan-400/10 text-cyan-400 rounded-lg">PySpark</span>
+                    </div>
+                </div>
+                
+                <!-- Data Engineering -->
+                <div class="card-tech p-8 rounded-xl">
+                    <div class="w-16 h-16 bg-purple-400/10 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-purple-400">Data Engineering</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-purple-400/10 text-purple-400 rounded-lg">ETL/ELT</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-purple-400/10 text-purple-400 rounded-lg">Data Modeling</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-purple-400/10 text-purple-400 rounded-lg">Batch Processing</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-purple-400/10 text-purple-400 rounded-lg">Data Ingestion</span>
+                    </div>
+                </div>
+                
+                <!-- Databases -->
+                <div class="card-tech p-8 rounded-xl">
+                    <div class="w-16 h-16 bg-green-400/10 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-green-400">Databases & Warehousing</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-green-400/10 text-green-400 rounded-lg">PostgreSQL</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-green-400/10 text-green-400 rounded-lg">Snowflake</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-green-400/10 text-green-400 rounded-lg">Databricks</span>
+                    </div>
+                </div>
+                
+                <!-- Big Data -->
+                <div class="card-tech p-8 rounded-xl">
+                    <div class="w-16 h-16 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-cyan-400">Big Data & Processing</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-cyan-400/10 text-cyan-400 rounded-lg">Apache Spark</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-cyan-400/10 text-cyan-400 rounded-lg">PySpark</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-cyan-400/10 text-cyan-400 rounded-lg">Databricks</span>
+                    </div>
+                </div>
+                
+                <!-- Orchestration -->
+                <div class="card-tech p-8 rounded-xl">
+                    <div class="w-16 h-16 bg-purple-400/10 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-purple-400">Workflow Orchestration</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-purple-400/10 text-purple-400 rounded-lg">Apache Airflow</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-purple-400/10 text-purple-400 rounded-lg">Azure Data Factory</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-purple-400/10 text-purple-400 rounded-lg">Apache Kafka</span>
+                    </div>
+                </div>
+                
+                <!-- Cloud & DevOps -->
+                <div class="card-tech p-8 rounded-xl">
+                    <div class="w-16 h-16 bg-green-400/10 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-green-400">Cloud & DevOps</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-green-400/10 text-green-400 rounded-lg">AWS</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-green-400/10 text-green-400 rounded-lg">Azure</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-green-400/10 text-green-400 rounded-lg">Docker</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-green-400/10 text-green-400 rounded-lg">Git</span>
+                        <span class="skill-tag mono text-xs px-3 py-2 bg-green-400/10 text-green-400 rounded-lg">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="section-divider max-w-7xl mx-auto px-6"></div>
+    
+    <!-- Education & Certifications -->
+    <section id="education" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black mb-16">
+                <span class="text-cyan-400 mono text-2xl">//</span> Education & Certifications
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Education -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-purple-400">Education</h3>
+                    <div class="space-y-6">
+                        <div class="card-tech p-6 rounded-xl">
+                            <h4 class="text-xl font-bold text-cyan-400 mb-2">Master of Computer Applications (MCA)</h4>
+                            <p class="text-gray-400 mb-2">University of Mysore</p>
+                            <p class="mono text-sm text-purple-400">Feb 2022 – Sep 2023</p>
+                        </div>
+                        <div class="card-tech p-6 rounded-xl">
+                            <h4 class="text-xl font-bold text-cyan-400 mb-2">Bachelor of Computer Applications (BCA)</h4>
+                            <p class="text-gray-400 mb-2">Sharnbasva University</p>
+                            <p class="mono text-sm text-purple-400">Aug 2018 – Nov 2021</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certifications -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-purple-400">Certifications</h3>
+                    <div class="space-y-6">
+                        <div class="card-tech p-6 rounded-xl group cursor-pointer">
+                        <a href="certificates.html">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="text-xl font-bold text-cyan-400 mb-2">IBM Data Science Certificate</h4>
+                                    <p class="text-gray-400 text-sm">IBM</p>
+                                </div>
+                                <svg  onclick="certificates.html" class="w-6 h-6 text-cyan-400 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                        <div class="card-tech p-6 rounded-xl group cursor-pointer">
+                        <a href="certificates.html">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="text-xl font-bold text-cyan-400 mb-2">LinkedIn-Microsoft Data Analytics</h4>
+                                    <p class="text-gray-400 text-sm">LinkedIn Learning / Microsoft</p>
+                                </div>
+                                <svg class="w-6 h-6 text-cyan-400 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="section-divider max-w-7xl mx-auto px-6"></div>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-black mb-8">
+                <span class="text-cyan-400 mono text-2xl">//</span> Get In Touch
+            </h2>
+            <p class="text-xl text-gray-400 mb-12 leading-relaxed">
+                I'm currently open to new opportunities and collaborations. Whether you have a question 
+                or just want to say hi, feel free to reach out!
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <div class="card-tech p-6 rounded-xl">
+                    <svg class="w-8 h-8 text-cyan-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <p class="mono text-sm text-gray-400">akash.hiremath25@gmail.com</p>
+                </div>
+                <div class="card-tech p-6 rounded-xl">
+                    <svg class="w-8 h-8 text-cyan-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <p class="mono text-sm text-gray-400">India</p>
+                </div>
+            </div>
+            
+            <a href="mailto:akash.hiremath25@gmail.com" class="btn-primary bg-cyan-400 text-black px-12 py-4 rounded-lg text-lg font-semibold hover:shadow-2xl transition-all inline-block">
+                Send Message
+            </a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="mono text-gray-400">Built with passion by Akash</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://linkedin.com/in/akash-hiremath25/" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:akash.hiremath25@gmail.com" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p class="mono text-sm text-gray-600">&copy; 2026 Akash. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
 </html>

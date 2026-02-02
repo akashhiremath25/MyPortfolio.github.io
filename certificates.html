@@ -1,459 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <meta name="description" content="Start your development with Steller landing page.">
-   <meta name="author" content="Devcrud">
-   <title>My Portfolio | Certifications</title>
-   <!-- Tailwind CSS CDN -->
-   <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates | Akash Hiremath</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="assets/imgs/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0e17;
+            --bg-card: #141821;
+            --accent-cyan: #00d4ff;
+            --accent-purple: #a855f7;
+            --accent-green: #10b981;
+            --text-primary: #e4e4e7;
+            --text-muted: #9ca3af;
+            --border: #1f2937;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Archivo', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+        
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        /* Animated Grid Background */
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(var(--border) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+            z-index: -2;
+        }
+        
+        /* Gradient Orbs */
+        .gradient-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.15;
+            z-index: -1;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        .orb-1 {
+            top: 10%;
+            right: 20%;
+            width: 500px;
+            height: 500px;
+            background: var(--accent-purple);
+            animation-delay: 0s;
+        }
+        
+        .orb-2 {
+            bottom: 20%;
+            left: 10%;
+            width: 400px;
+            height: 400px;
+            background: var(--accent-cyan);
+            animation-delay: 7s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(50px, -50px) scale(1.1); }
+            66% { transform: translate(-30px, 30px) scale(0.9); }
+        }
+        
+        /* Card Hover Effects */
+        .cert-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+            animation: scan 3s linear infinite;
+        }
+        
+        @keyframes scan {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .cert-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+        }
+        
+        /* Navigation */
+        nav {
+            backdrop-filter: blur(20px);
+            background: rgba(10, 14, 23, 0.8);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        /* Badge Styles */
+        .badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .badge-verified {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            color: white;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-cyan);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-purple);
+        }
+        
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: revealUp 0.8s ease-out forwards;
+        }
+        
+        @keyframes revealUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+    </style>
 </head>
-
-
-<!-- Modern Animated Navbar -->
-<nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-   <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-      <!-- Logo -->
-      <a href="#home" class="flex items-center space-x-2">
-         <img src="assets/imgs/logo.svg" alt="Logo" class="h-8 w-auto">
-         <span class="text-xl font-bold text-gray-800">Akash</span>
-      </a>
-
-      <!-- Hamburger Menu -->
-      <button id="navbar-toggler"
-         class="lg:hidden flex flex-col justify-center items-center space-y-1 focus:outline-none">
-         <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
-         <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
-         <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
-      </button>
-
-      <!-- Nav Links -->
-      <div id="navbar-menu" class="hidden lg:flex items-center space-x-8">
-         <a href="index.html"
-            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">Home</a>
-         <a href="#internships" class="nav-link">Internships</a>
-         <a href="#certs-2024" class="nav-link">2024</a>
-         <a href="#certs-2023" class="nav-link">2023</a>
-         <a href="#certs-2022" class="nav-link">2022</a>
-      </div>
-   </div>
-
-   <!-- Mobile Menu -->
-   <div id="mobile-menu" class="lg:hidden hidden flex flex-col bg-white px-4 pb-4 space-y-2">
-      <a href="index.html" class="mobile-link">Home</a>
-      <a href="#internships" class="mobile-link">Internships</a>
-      <a href="#certs-2024" class="mobile-link">2024</a>
-      <a href="#certs-2023" class="mobile-link">2023</a>
-      <a href="#certs-2022" class="mobile-link">2022</a>
-   </div>
-</nav>
-
-
-<!-- Certifications Section -->
-<section id="certifications" class="pt-32 py-16 bg-gray-100">
-   <div class="container mx-auto px-4">
-
-      <!-- Section Title -->
-      <div class="text-center mb-16 animate-fade-in-up">
-         <h2 class="text-4xl font-extrabold text-gray-800 tracking-tight">🎓 My Certifications</h2>
-         <p class="text-gray-500 mt-2">A showcase of my professional and internship achievements.</p>
-      </div>
-
-      <!-- Internship Certificates Section -->
-      <section id="internships" class="scroll-mt-24">
-         <div class="mb-12" id="internships">
-            <h3 class="text-2xl font-semibold text-gray-700 mb-8 animate-fade-in-up">💼 Internship Certificates</h3>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-               <!-- Certificate 1 -->
-               <div
-                  class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-500 ease-in-out animate-fade-in-up">
-                  <a href="assets/archives/IC2.png" target="_blank">
-                     <img src="assets/archives/IC2.png" alt="Internship Certificate from Coders Boutique"
-                        class="w-full h-52 object-cover object-center">
-                  </a>
-                  <div class="p-4">
-                     <h4 class="text-lg font-semibold text-gray-800">Coders Boutique - Data Engineer Intern</h4>
-                     <p class="text-sm text-gray-500 mt-1">Oct - Dec 2024</p>
-                  </div>
-               </div>
-
-               <!-- Certificate 2 -->
-               <div
-                  class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-500 ease-in-out animate-fade-in-up">
-                  <a href="assets/archives/IC.png" target="_blank">
-                     <img src="assets/archives/IC.png" alt="Internship Certificate from Analyttica"
-                        class="w-full h-52 object-cover object-center">
-                  </a>
-                  <div class="p-4">
-                     <h4 class="text-lg font-semibold text-gray-800">Analyttica Datalab - Data Analyst Intern</h4>
-                     <p class="text-sm text-gray-500 mt-1">Mar - Jun 2024</p>
-                  </div>
-               </div>
-
+<body>
+    <!-- Background Effects -->
+    <div class="grid-bg"></div>
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-xl font-bold mono reveal">
+                    <span class="text-cyan-400">&lt;</span>Akash<span class="text-cyan-400">/&gt;</span>
+                </a>
+                <div class="hidden md:flex space-x-8 reveal delay-1">
+                    <a href="index.html#about" class="text-gray-400 hover:text-cyan-400 transition-colors mono text-sm">About</a>
+                    <a href="index.html#experience" class="text-gray-400 hover:text-cyan-400 transition-colors mono text-sm">Experience</a>
+                    <a href="index.html#skills" class="text-gray-400 hover:text-cyan-400 transition-colors mono text-sm">Skills</a>
+                    <a href="certificates.html" class="text-cyan-400 mono text-sm">Certificates</a>
+                    <a href="index.html#contact" class="text-gray-400 hover:text-cyan-400 transition-colors mono text-sm">Contact</a>
+                </div>
+                <a href="index.html" class="text-gray-400 hover:text-cyan-400 transition-colors reveal delay-2 mono text-sm">
+                    ← Back
+                </a>
             </div>
-         </div>
-      </section>
-      <!-- Internship Certificates Section End -->
-
-
-      <!-- Certificate 3 (Single Row Left-Aligned with Empty Slots) -->
-      <div class="mb-12">
-         <h3 class="text-2xl font-semibold text-gray-700 mb-8 animate-fade-in-up">🏅 Achievement Badge</h3>
-
-         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Certificate Card -->
-            <div
-               class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-500 ease-in-out animate-fade-in-up">
-               <a href="assets/archives/leetcode.png" target="_blank" class="block">
-                  <img src="assets/archives/leetcode.png" alt="50 Days Badge from LeetCode"
-                     class="w-full h-52 object-cover object-center">
-               </a>
-               <div class="p-4">
-                  <h4 class="text-lg font-semibold text-gray-800">LeetCode - 50 Days Badge</h4>
-                  <p class="text-sm text-gray-500 mt-1">Earned in 2024</p>
-               </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl md:text-7xl font-black mb-6 reveal">
+                    Professional <span class="text-cyan-400">Certificates</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto reveal delay-1">
+                    Continuous learning and professional development through industry-recognized certifications
+                </p>
             </div>
-
-         </div>
-      </div>
-
-
-      <!-- 2024 Certificates Section -->
-      <section id="certs-2024" class="scroll-mt-24">
-         <div class="mb-12" id="certs-2024">
-            <h3 class="text-3xl font-semibold text-gray-800 mb-6 animate-fade-in-up">📅 Certifications Earned in 2024
-            </h3>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-               <!-- Certificate 1 -->
-               <div
-                  class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-500 animate-fade-in-up">
-                  <a href="assets/archives/ds9.pdf" target="_blank" class="block">
-                     <img src="assets/archives/ds9.jpg" alt="IBM ML with Python Certificate"
-                        class="w-full h-48 object-cover object-center">
-                  </a>
-                  <div class="p-4">
-                     <h4 class="text-lg font-semibold text-gray-800">
-                        IBM - Machine Learning with Python
-                     </h4>
-                     <p class="text-sm text-gray-500">Data Science Professional Certificate</p>
-                  </div>
-               </div>
-
-               <!-- Certificate 2 -->
-               <div
-                  class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-500 animate-fade-in-up">
-                  <a href="assets/archives/ds8.pdf" target="_blank" class="block">
-                     <img src="assets/archives/ds8.jpg" alt="IBM Data Viz Certificate"
-                        class="w-full h-48 object-cover object-center">
-                  </a>
-                  <div class="p-4">
-                     <h4 class="text-lg font-semibold text-gray-800">
-                        IBM - Data Visualization with Python
-                     </h4>
-                     <p class="text-sm text-gray-500">Data Science Professional Certificate</p>
-                  </div>
-               </div>
-
-               <!-- Certificate 3 -->
-               <div
-                  class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-500 animate-fade-in-up">
-                  <a href="assets/archives/ds7.pdf" target="_blank" class="block">
-                     <img src="assets/archives/ds7.jpg" alt="IBM Data Analysis Certificate"
-                        class="w-full h-48 object-cover object-center">
-                  </a>
-                  <div class="p-4">
-                     <h4 class="text-lg font-semibold text-gray-800">
-                        IBM - Data Analysis with Python
-                     </h4>
-                     <p class="text-sm text-gray-500">Data Science Professional Certificate</p>
-                  </div>
-               </div>
+        </div>
+    </section>
+    
+    <!-- Certificates Grid -->
+    <section class="pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- IBM Data Science Certificate -->
+                <div class="cert-card p-8 rounded-xl reveal delay-2">
+                    <div class="badge badge-verified mono">VERIFIED</div>
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-cyan-400 mb-2">IBM Data Science Professional Certificate</h3>
+                        <p class="text-gray-400 mb-4">Issued by IBM</p>
+                        <p class="text-gray-500 text-sm mb-6">
+                            Comprehensive program covering Python, SQL, data visualization, machine learning, and data analysis. 
+                            Includes hands-on projects with real-world datasets and industry-standard tools.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start">
+                            <span class="text-cyan-400 mr-3 mt-1">✓</span>
+                            <div>
+                                <p class="font-semibold">Skills Acquired</p>
+                                <p class="text-gray-400 text-sm">Python Programming, Data Analysis, Machine Learning, SQL, Data Visualization</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-cyan-400 mr-3 mt-1">✓</span>
+                            <div>
+                                <p class="font-semibold">Technologies</p>
+                                <p class="text-gray-400 text-sm">Jupyter Notebooks, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-cyan-400 mr-3 mt-1">✓</span>
+                            <div>
+                                <p class="font-semibold">Projects Completed</p>
+                                <p class="text-gray-400 text-sm">10+ hands-on labs and capstone project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="mono text-xs px-3 py-2 bg-cyan-400/10 text-cyan-400 rounded-lg">Python</span>
+                        <span class="mono text-xs px-3 py-2 bg-cyan-400/10 text-cyan-400 rounded-lg">Machine Learning</span>
+                        <span class="mono text-xs px-3 py-2 bg-cyan-400/10 text-cyan-400 rounded-lg">Data Analysis</span>
+                        <span class="mono text-xs px-3 py-2 bg-cyan-400/10 text-cyan-400 rounded-lg">SQL</span>
+                    </div>
+                    
+                    <div class="flex items-center justify-between pt-6 border-t border-gray-800">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-gray-400 text-sm mono">Completed 2024</span>
+                        </div>
+                        <a href="https://akashhiremath25.github.io/MyPortfolio.github.io/assets/archives/ds7.pdf" class="text-cyan-400 hover:text-purple-400 transition-colors text-sm font-semibold">
+                            View Certificate →
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- LinkedIn-Microsoft Data Analytics -->
+                <div class="cert-card p-8 rounded-xl reveal delay-3">
+                    <div class="badge badge-verified mono">VERIFIED</div>
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-purple-400 mb-2">LinkedIn-Microsoft Data Analytics Certificate</h3>
+                        <p class="text-gray-400 mb-4">Issued by LinkedIn Learning & Microsoft</p>
+                        <p class="text-gray-500 text-sm mb-6">
+                            Professional certification in data analytics covering Power BI, Excel analytics, data visualization 
+                            best practices, and business intelligence fundamentals for data-driven decision making.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start">
+                            <span class="text-purple-400 mr-3 mt-1">✓</span>
+                            <div>
+                                <p class="font-semibold">Skills Acquired</p>
+                                <p class="text-gray-400 text-sm">Power BI, Data Visualization, Excel Analytics, Business Intelligence, DAX</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-purple-400 mr-3 mt-1">✓</span>
+                            <div>
+                                <p class="font-semibold">Technologies</p>
+                                <p class="text-gray-400 text-sm">Microsoft Power BI, Excel, Power Query, DAX Language</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-purple-400 mr-3 mt-1">✓</span>
+                            <div>
+                                <p class="font-semibold">Focus Areas</p>
+                                <p class="text-gray-400 text-sm">Dashboard design, Data modeling, Analytics storytelling</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="mono text-xs px-3 py-2 bg-purple-400/10 text-purple-400 rounded-lg">Power BI</span>
+                        <span class="mono text-xs px-3 py-2 bg-purple-400/10 text-purple-400 rounded-lg">Excel</span>
+                        <span class="mono text-xs px-3 py-2 bg-purple-400/10 text-purple-400 rounded-lg">Data Viz</span>
+                        <span class="mono text-xs px-3 py-2 bg-purple-400/10 text-purple-400 rounded-lg">BI</span>
+                    </div>
+                    
+                    <div class="flex items-center justify-between pt-6 border-t border-gray-800">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-gray-400 text-sm mono">Completed 2024</span>
+                        </div>
+                        <a href="https://github.com/akashhiremath25/MyPortfolio.github.io/blob/main/assets/archives/LL3.pdf" class="text-purple-400 hover:text-cyan-400 transition-colors text-sm font-semibold">
+                            View Certificate →
+                        </a>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
-
-
-      <!-- 2023 Certificates Section -->
-      <section id="certs-2023" class="scroll-mt-24">
-         <div class="mb-12" id="certs-2023">
-            <h3 class="text-3xl font-semibold text-gray-800 mb-6 animate-fade-in-up">📅 Certifications Earned in 2023
-            </h3>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-               <!-- Certificate 1 -->
-               <div
-                  class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-500 animate-fade-in-up">
-                  <a href="assets/archives/11.pdf" target="_blank" class="block">
-                     <img src="assets/archives/11.jpg" alt="Data Science Course Certificate"
-                        class="w-full h-48 object-cover object-center">
-                  </a>
-                  <div class="p-4">
-                     <h4 class="text-lg font-semibold text-gray-800">Data Science Course Certificate</h4>
-                     <p class="text-sm text-gray-500">Issued by Internshala</p>
-                  </div>
-               </div>
-
-               <!-- Certificate 2 -->
-               <div
-                  class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-500 animate-fade-in-up">
-                  <a href="assets/archives/2.pdf" target="_blank" class="block">
-                     <img src="assets/archives/2.jpg" alt="MySQL Assessment Certificate"
-                        class="w-full h-48 object-cover object-center">
-                  </a>
-                  <div class="p-4">
-                     <h4 class="text-lg font-semibold text-gray-800">MySQL Assessment Certificate</h4>
-                     <p class="text-sm text-gray-500">Issued by HackerRank</p>
-                  </div>
-               </div>
-
-               <!-- Certificate 3 -->
-               <div
-                  class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-500 animate-fade-in-up">
-                  <a href="assets/archives/3.pdf" target="_blank" class="block">
-                     <img src="assets/archives/3.jpg" alt="Problem Solving Certificate"
-                        class="w-full h-48 object-cover object-center">
-                  </a>
-                  <div class="p-4">
-                     <h4 class="text-lg font-semibold text-gray-800">Problem Solving Assessment Certificate</h4>
-                     <p class="text-sm text-gray-500">Issued by HackerRank</p>
-                  </div>
-               </div>
-
+            
+            <!-- Additional Info -->
+            <div class="mt-16 text-center reveal delay-4">
+                <div class="cert-card p-12 rounded-xl inline-block">
+                    <h3 class="text-2xl font-bold mb-4 text-cyan-400">Continuous Learning</h3>
+                    <p class="text-gray-400 max-w-2xl">
+                        Currently pursuing additional certifications in AWS Solutions Architect, 
+                        Apache Spark, and Advanced Data Engineering to stay at the forefront of industry trends.
+                    </p>
+                </div>
             </div>
-         </div>
-      </section>
-
-
-      <!-- 2022 Certificates Section -->
-      <section id="certs-2022" class="scroll-mt-24">
-         <div class="mb-12" id="certs-2022">
-            <h3 class="text-3xl font-semibold text-gray-800 mb-6 animate-fade-in-up">📅 Certifications Earned in 2022
-            </h3>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-               <!-- Certificate 1 -->
-               <div
-                  class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-500 animate-fade-in-up">
-                  <a href="assets/archives/9.png" target="_blank" class="block">
-                     <img src="assets/archives/9.png" alt="ML Intermediate Certificate from Kaggle"
-                        class="w-full h-48 object-cover object-center">
-                  </a>
-                  <div class="p-4">
-                     <h4 class="text-lg font-semibold text-gray-800">ML Intermediate Course Certificate</h4>
-                     <p class="text-sm text-gray-500">Issued by Kaggle</p>
-                  </div>
-               </div>
-
-               <!-- Certificate 2 -->
-               <div
-                  class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-500 animate-fade-in-up">
-                  <a href="assets/archives/8.png" target="_blank" class="block">
-                     <img src="assets/archives/8.png" alt="ML Basic Certificate from Kaggle"
-                        class="w-full h-48 object-cover object-center">
-                  </a>
-                  <div class="p-4">
-                     <h4 class="text-lg font-semibold text-gray-800">ML Basic Course Certificate</h4>
-                     <p class="text-sm text-gray-500">Issued by Kaggle</p>
-                  </div>
-               </div>
-
-               <!-- Certificate 3 -->
-               <div
-                  class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-500 animate-fade-in-up">
-                  <a href="assets/archives/7.png" target="_blank" class="block">
-                     <img src="assets/archives/7.png" alt="Data Visualization Certificate from Kaggle"
-                        class="w-full h-48 object-cover object-center">
-                  </a>
-                  <div class="p-4">
-                     <h4 class="text-lg font-semibold text-gray-800">Data Visualization Course Certificate</h4>
-                     <p class="text-sm text-gray-500">Issued by Kaggle</p>
-                  </div>
-               </div>
-
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-black mb-8">
+                Let's Work Together
+            </h2>
+            <p class="text-xl text-gray-400 mb-12">
+                Interested in collaborating or have a project in mind?
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:akash.hiremath25@gmail.com" class="bg-cyan-400 text-black px-10 py-4 rounded-lg text-lg font-semibold hover:shadow-2xl transition-all">
+                    Get In Touch
+                </a>
+                <a href="index.html" class="bg-transparent border border-cyan-400 text-cyan-400 px-10 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all">
+                    View Portfolio
+                </a>
             </div>
-         </div>
-      </section>
-
-   </div>
-</section>
-<!-- End Certifications Section -->
-
-
-
-<!-- Page Footer -->
-<footer class="bg-gray-900 text-white py-8">
-   <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-      <!-- Left -->
-      <p class="text-sm text-center md:text-left mb-4 md:mb-0">
-         &copy;
-         <script>document.write(new Date().getFullYear())</script>
-         <a href="#" class="text-blue-400 hover:underline font-medium">Akash</a>. All rights reserved.
-      </p>
-
-      <!-- Right: Social Icons -->
-      <div class="flex justify-center space-x-6">
-         <a href="https://github.com/AkashHiremath856" target="_blank" class="hover:text-blue-400 transition"
-            title="GitHub">
-            <i class="fab fa-github fa-lg"></i>
-         </a>
-         <a href="https://www.linkedin.com/in/akash-hiremath" target="_blank" class="hover:text-blue-400 transition"
-            title="LinkedIn">
-            <i class="fab fa-linkedin fa-lg"></i>
-         </a>
-         <a href="mailto:akash.hiremath25@gmail.com" class="hover:text-blue-400 transition" title="Email">
-            <i class="fas fa-envelope fa-lg"></i>
-         </a>
-      </div>
-   </div>
-</footer>
-<!-- End of Page Footer -->
-
-
-
-<script>
-   const toggler = document.getElementById("cert-navbar-toggler");
-   const desktopMenu = document.getElementById("cert-navbar-menu");
-   const mobileMenu = document.getElementById("cert-mobile-menu");
-
-   toggler.addEventListener("click", () => {
-      desktopMenu.classList.toggle("hidden");
-      mobileMenu.classList.toggle("hidden");
-   });
-
-   // Active nav highlight on scroll
-   const sections = document.querySelectorAll("section[id]");
-   const navLinks = document.querySelectorAll(".nav-btn");
-
-   window.addEventListener("scroll", () => {
-      let scrollPos = window.scrollY + 100;
-
-      sections.forEach((section) => {
-         const top = section.offsetTop;
-         const height = section.offsetHeight;
-         const id = section.getAttribute("id");
-
-         if (scrollPos >= top && scrollPos <= top + height) {
-            navLinks.forEach((link) => {
-               link.classList.remove("text-blue-600", "font-semibold");
-               if (link.getAttribute("href") === `#${id}`) {
-                  link.classList.add("text-blue-600", "font-semibold");
-               }
-            });
-         }
-      });
-   });
-</script>
-
-
-
-<!-- Tailwind Custom Animations -->
-<style>
-   html {
-      scroll-behavior: smooth;
-   }
-
-   @keyframes fade-in-up {
-      0% {
-         opacity: 0;
-         transform: translateY(20px);
-      }
-
-      100% {
-         opacity: 1;
-         transform: translateY(0);
-      }
-   }
-
-   .animate-fade-in-up {
-      animation: fade-in-up 1s ease-out both;
-   }
-
-   @keyframes fade-in-up {
-      0% {
-         opacity: 0;
-         transform: translateY(20px);
-      }
-
-      100% {
-         opacity: 1;
-         transform: translateY(0);
-      }
-   }
-
-   .animate-fade-in-up {
-      animation: fade-in-up 1s ease-out both;
-   }
-
-
-   .nav-link {
-      position: relative;
-      color: #1f2937;
-      font-weight: 500;
-      transition: color 0.3s ease;
-   }
-
-   .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      width: 0%;
-      height: 2px;
-      background-color: #2563eb;
-      transition: width 0.3s ease;
-   }
-
-   .nav-link:hover {
-      color: #2563eb;
-   }
-
-   .nav-link:hover::after {
-      width: 100%;
-   }
-
-   .mobile-link {
-      padding: 0.5rem 0;
-      color: #1f2937;
-      font-weight: 500;
-      border-bottom: 1px solid #e5e7eb;
-      transition: color 0.3s ease;
-   }
-
-   .mobile-link:hover {
-      color: #2563eb;
-   }
-
-   @keyframes fade-in-up {
-      0% {
-         opacity: 0;
-         transform: translateY(30px);
-      }
-
-      100% {
-         opacity: 1;
-         transform: translateY(0);
-      }
-   }
-
-   .animate-fade-in-up {
-      animation: fade-in-up 0.8s ease-out both;
-   }
-
-   .delay-200 {
-      animation-delay: 0.2s;
-   }
-</style>
-<!-- End Style -->
-
-
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="mono text-gray-400">© 2026 Akash Hiremath. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://linkedin.com/in/akash-hiremath25/" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:akash.hiremath25@gmail.com" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
